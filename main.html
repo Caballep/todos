@@ -1,0 +1,22 @@
+<head>
+
+</head>
+
+<body>
+    <h1>
+        Bienvenido a la mejor app del mundo
+    </h1>
+    <ul></ul>
+</body>
+<script>
+    const electron = require('electron');
+    const { ipcRenderer } = electron;
+
+    ipcRenderer.on('todo:add', (event, todo) => {
+        const li = document.createElement('li');
+        const text = document.createTextNode(todo);
+
+        li.appendChild(text);
+        document.querySelector('ul').appendChild(li);
+    });
+</script>
