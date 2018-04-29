@@ -2,7 +2,7 @@ const electron = require('electron');
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
 let mainWindow = electron;
-let addWindow = electron;
+let addWindow = electron;   
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow({});
